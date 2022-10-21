@@ -209,6 +209,11 @@ function updatePhysics( deltaTime ){
             setupPhysicsWorld();
             setupGraphics();
             renderFrame();
+            let deltaTime = clock.getDelta();
+//new line of code
+updatePhysics( deltaTime );
+renderer.render( scene, camera );
+requestAnimationFrame( renderFrame );
 
         }
 
