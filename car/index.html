@@ -146,7 +146,7 @@ var createScene = function () {
 
     //load our wheel material
     wheelMaterial = new BABYLON.StandardMaterial("WheelMaterial"); 
-    wheelMaterial.diffuseTexture = new BABYLON.Texture("https://assets.babylonjs.com/environments/wheel.png");
+    wheelMaterial.diffuseTexture = new BABYLON.Texture("texture/wheeloriginal.png");
 
     //almacenamos los UV de la cara de la rueda una vez y los reutilizamos para cada rueda
     wheelUV[0] = new BABYLON.Vector4(0, 0, 1, 1);
@@ -554,7 +554,7 @@ function createChassisMesh(scene, w, l, h) {
 
 		//material del carro
 		const carMat = new BABYLON.StandardMaterial("carMat");
-		carMat.diffuseTexture = new BABYLON.Texture("https://drive.google.com/file/d/1LvB3rFxMDjSQCQXmfhf23UTgxQxid9SD/preview");
+		carMat.diffuseTexture = new BABYLON.Texture("texture/Sin-título-1.png");
 
 		mesh = BABYLON.MeshBuilder.ExtrudePolygon("car", {shape: outline, depth: w, faceUV: faceUV, wrap: true}); 
 		mesh.material = carMat;
